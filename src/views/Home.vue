@@ -1,23 +1,39 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+  <div class="home container-fluid">
+    <div class="row">
+      <div class="col-12 bg-head">
+        <h1>Gifinator 5000</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <results />
+      </div>
+      <div class="col-6">
+        <info />
+      </div>
+    </div>
   </div>
 </template>
 
 
 <script>
+import Results from "@/components/Results";
+import Info from "@/components/Info";
+
 export default {
   name: "Home",
-  data() {
-    return {};
-  },
-  methods: {},
-  computed: {}
+  components: {
+    Results,
+    Info
+  }
 };
 </script>
 
 <style>
-.info {
-  background-color: rgb(44, 44, 119);
+.bg-head {
+  background-color: deepskyblue;
 }
 </style>
+
+<img alt="Vue logo" src="../assets/logo.png" />
